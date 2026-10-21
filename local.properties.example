@@ -1,0 +1,12 @@
+# Copy to local.properties and fill in your signing config.
+# Required only for release builds; debug builds work without it.
+# This file is gitignored.
+
+# Android SDK location (optional if ANDROID_HOME/ANDROID_SDK_ROOT is set)
+# sdk.dir=/path/to/android-sdk
+
+# Release signing config
+sign.store.file=/path/to/your.keystore
+sign.store.password=your-store-password
+sign.key.alias=your-key-alias
+sign.key.password=your-key-password

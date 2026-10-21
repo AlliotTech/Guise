@@ -69,7 +69,7 @@ object LServiceBridgeClient {
     @OptIn(DelicateCoroutinesApi::class)
     fun start(context: Context) {
         val intent = Intent(context, LServiceBridgeRootService::class.java)
-        intent.putExtra(LServiceBridgeRootService.MANAGER_APK_PATH, context.managerApkPath)
+        intent.putExtra("apkPath", context.managerApkPath)
         try {
             Runtime.getRuntime().exec("su")
         } catch (e: Exception) {

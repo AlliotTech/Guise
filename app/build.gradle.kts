@@ -33,11 +33,16 @@ android {
             enableV1Signing = true
             enableV2Signing = true
             enableV3Signing = true
-            val properties = loadProperties(rootProject.file("local.properties").path)
-            storeFile = File(properties.getProperty("sign.store.file"))
-            storePassword = properties.getProperty("sign.store.password")
-            keyAlias = properties.getProperty("sign.key.alias")
-            keyPassword = properties.getProperty("sign.key.password")
+            // local.properties is optional; required only for release signing.
+            // Create it from local.properties.example to sign release builds.
+            val localPropsFile = rootProject.file("local.properties")
+            if (localPropsFile.exists()) {
+                val properties = loadProperties(localPropsFile.path)
+                storeFile = File(properties.getProperty("sign.store.file"))
+                storePassword = properties.getProperty("sign.store.password")
+                keyAlias = properties.getProperty("sign.key.alias")
+                keyPassword = properties.getProperty("sign.key.password")
+            }
         }
     }
     buildTypes {

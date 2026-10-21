@@ -20,7 +20,8 @@ mmkvKtx = "1.2.16"
 betterandroid = "1.0.1"
 yuki = "1.2.0"
 xposed = "82"
-lservice = "1.0.0"
+lservice = "75dd76e307"
+libsu = "5.2.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -55,7 +56,8 @@ yuki-api = { module = "com.highcapable.yukihookapi:api", version.ref = "yuki" }
 yuki-ksp-xposed = { module = "com.highcapable.yukihookapi:ksp-xposed", version.ref = "yuki" }
 xposed-api = { module = "de.robv.android.xposed:api", version.ref = "xposed" }
 kotlin-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinSerialization" }
-lservice = { module = "io.github.houvven:lservice", version.ref = "lservice" }
+lservice = { group = "com.github.Houvven", name = "LService", version.ref = "lservice" }
+libsu-io = { group = "com.github.topjohnwu.libsu", name = "io", version.ref = "libsu" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
